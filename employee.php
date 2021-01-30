@@ -101,25 +101,25 @@
                       <div class="row">
                       <div class="col-md-5">
                           <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" id="email" class="form-control" placeholder="Email">
                           </div>
                         </div>
                         <div class="col-md-5">
                           <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Phone Number">
+                            <input type="text" id="ph_number" class="form-control" placeholder="Phone Number">
                           </div>
                         </div>
                         
                         <div class="col-md-10">
                           <div class="form-group">
-                            <input type="date" class="form-control" placeholder="Date">
+                            <input type="date" id="date" class="form-control" placeholder="Date">
                           </div>
                         </div>
                       </div>
                     
                           </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-default">Add User</button>
+                            <button type="button" id="add_user" class="btn btn-default">Add User</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                           </div>
                         </div>
@@ -303,6 +303,26 @@
             </div>
         </div>
         <?php include "foot.php";?>
+    <script>
+        $("#add_user").click(function(a) {
+    a.preventDefault();
+    var email = $("#email").val();
+    
+    var phone_number = $("#ph_number").val();
+   
+    var date = $("#date").val();
+    
+    
+    $.ajax({
+            method: "POST",
+            url: "http://localhost:88/server/",
+            data: { email: email, phonenumber: phone_number,DOJ: date }
+        })
+        .done(function(msg) {
+            alert("Data Saved: " + msg);
+        });
+});
+</script>
 </body>
 
 
