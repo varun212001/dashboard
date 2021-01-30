@@ -1,4 +1,4 @@
- -->
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +52,9 @@
                 /* flex: 0 0 58.333333%; */
                 max-width: 98.333333%;
             }
+            
         }
+        
     </style>
 </head>
 
@@ -79,30 +81,52 @@
                       <i class="tim-icons icon-settings-gear-63"></i>
                     </button>
                                     <div class="dropdown-menu dropdown-menu-right">
-                                        <a button type="button" class="dropdown-item" data-toggle="modal" data-target="#exampleModal" href="#pablo">Add user</a>
+                                        <a button type="button" class="dropdown-item" class="btn btn-primary" data-toggle="modal" data-target="#myModal"href="#pablo">Add user</a>
                                        
                                     </div>
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-
-
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                 
-                                                <span aria-hidden="true">&times;</span>
-                                              </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ...
-                                                </div>
-                                                <div class="modal-footer">
-                                                   
-                                                    <button type="button" class="btn btn-primary">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!-- Classic Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header justify-content-center">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                              <i class="tim-icons icon-simple-remove"></i>
+                            </button>
+                            <h1 class="title title-up">Add User</h1>
+                           
+                          </div>
+                          <div class="modal-body">
+                          <label class="col-sm-2 col-form-label"></label>
+                    
+                      <div class="row">
+                      <div class="col-md-5">
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="col-md-5">
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Phone Number">
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-10">
+                          <div class="form-group">
+                            <input type="date" class="form-control" placeholder="Date">
+                          </div>
+                        </div>
+                      </div>
+                    
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default">Add User</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  End Modal -->
+                            
                                 </div>
                             </div>
                             <h5 class="card-title">Employee Table</h5>
