@@ -319,7 +319,7 @@
             data: { email: email, phonenumber: phone_number,DOJ: date }
         })
         .done(function(msg) {
-            alert("Data Saved: " + msg);
+            demo.showNotification('bottom','center',msg)
         });
 });
 
