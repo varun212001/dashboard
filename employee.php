@@ -253,7 +253,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                Manuela Rico
+                                                Manuela Ric
                                             </td>
                                             <td>
                                                 Manager
